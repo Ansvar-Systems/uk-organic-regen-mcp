@@ -1,0 +1,99 @@
+schema_version: "1.0"
+mcp_name: "UK Organic & Regenerative MCP"
+category: "domain_intelligence"
+
+sources:
+  - name: "EU Regulation 2018/848 on Organic Production"
+    authority: "European Commission (retained in UK law)"
+    official_url: "https://www.legislation.gov.uk/eur/2018/848"
+    api_url: null
+    retrieval_method: "MANUAL_REVIEW"
+    format: "HTML"
+    authentication: "none"
+    update_frequency: "as amended"
+    license:
+      type: "Open Government Licence"
+      url: "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+      summary: "Free to copy, publish, distribute, and adapt with attribution"
+    coverage:
+      scope: "Organic production rules, conversion periods, permitted inputs, labelling requirements"
+      version: "2018/848 as retained"
+      item_count: "~200 articles and annexes"
+    languages:
+      - "en"
+
+  - name: "Soil Association Organic Standards"
+    authority: "Soil Association Certification"
+    official_url: "https://www.soilassociation.org/our-standards/"
+    api_url: null
+    retrieval_method: "MANUAL_REVIEW"
+    format: "PDF"
+    authentication: "none"
+    update_frequency: "annual"
+    license:
+      type: "Published standards"
+      url: "https://www.soilassociation.org/our-standards/"
+      summary: "Public reference; certification body standards"
+    coverage:
+      scope: "Additional requirements beyond EU baseline for arable, dairy, beef, poultry, horticulture, processing"
+      version: "2025 edition"
+      item_count: "~100 requirements"
+    languages:
+      - "en"
+
+  - name: "OF&G Organic Standards"
+    authority: "Organic Farmers & Growers CIC"
+    official_url: "https://ofgorganic.org/useful-info/organic-standards"
+    api_url: null
+    retrieval_method: "MANUAL_REVIEW"
+    format: "PDF"
+    authentication: "none"
+    update_frequency: "annual"
+    license:
+      type: "Published standards"
+      url: "https://ofgorganic.org/useful-info/organic-standards"
+      summary: "Public reference; certification body standards"
+    coverage:
+      scope: "UK organic certification requirements aligned with EU baseline"
+      version: "2025 edition"
+      item_count: "~80 requirements"
+    languages:
+      - "en"
+
+  - name: "DEFRA Biodiversity Net Gain Guidance"
+    authority: "Department for Environment, Food and Rural Affairs"
+    official_url: "https://www.gov.uk/government/collections/biodiversity-net-gain"
+    api_url: null
+    retrieval_method: "MANUAL_REVIEW"
+    format: "HTML"
+    authentication: "none"
+    update_frequency: "as updated"
+    license:
+      type: "Open Government Licence"
+      url: "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+      summary: "Free to copy, publish, distribute, and adapt with attribution"
+    coverage:
+      scope: "BNG unit calculations, habitat types, creation costs, management obligations"
+      version: "current"
+      item_count: "~30 habitat types"
+    languages:
+      - "en"
+
+  - name: "AHDB Cover Crop and Soil Health Research"
+    authority: "Agriculture and Horticulture Development Board"
+    official_url: "https://ahdb.org.uk/knowledge-library/cover-crops"
+    api_url: null
+    retrieval_method: "MANUAL_REVIEW"
+    format: "HTML"
+    authentication: "none"
+    update_frequency: "as published"
+    license:
+      type: "Open Government Licence"
+      url: "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+      summary: "Free to copy, publish, distribute, and adapt with attribution"
+    coverage:
+      scope: "Cover crop species data, N fixation rates, biomass yields, soil health indicators"
+      version: "current"
+      item_count: "~50 species and indicators"
+    languages:
+      - "en"

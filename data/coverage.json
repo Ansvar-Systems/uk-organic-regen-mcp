@@ -1,0 +1,13 @@
+{
+  "mcp_name": "UK Organic & Regenerative MCP",
+  "jurisdiction": "GB",
+  "build_date": "2026-04-03",
+  "organic_standards": 21,
+  "permitted_inputs": 18,
+  "conversion_rules": 6,
+  "cover_crops": 12,
+  "biodiversity_habitats": 8,
+  "soil_health_indicators": 8,
+  "fts_entries": 21,
+  "source_hash": "initial"
+}
