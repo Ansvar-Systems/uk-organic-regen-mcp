@@ -59,6 +59,59 @@ const standards: [string, string, string, string, string, number][] = [
   ['EU Baseline', 'arable', 'No GMOs, no synthetic pesticides, no manufactured nitrogen fertiliser', 'general', 'Reg 2018/848 Art 5(f)', 0],
   ['EU Baseline', 'arable', 'Full input/output records required; mass balance documentation', 'records', 'Reg 2018/848 Art 39', 0],
   ['EU Baseline', 'arable', 'Annual inspection by approved control body required', 'inspection', 'Reg 2018/848 Art 34', 0],
+
+  // ── New: Seed & Propagation ───────────────────────────────────────────
+  ['EU Baseline', 'arable', 'Organic seed must be used; derogation via OrganicXseeds database when organic seed not available', 'seed', 'Reg 2018/848 Art 12(1)(i)', 0],
+  ['EU Baseline', 'arable', 'No chemical seed treatments permitted; no GMO seed or propagation material', 'seed', 'Reg 2018/848 Art 5(f)(iii)', 0],
+  ['Soil Association', 'arable', 'Seed derogation requires documented search on OrganicXseeds and written justification to certifier', 'seed', 'SA Standard 4.2', 1],
+
+  // ── New: Weed Management ──────────────────────────────────────────────
+  ['EU Baseline', 'arable', 'No synthetic herbicides permitted; weed control by mechanical cultivation, hand weeding, stale seedbeds, flame weeding, and crop competition', 'weed_management', 'Reg 2018/848 Art 12(1)(a)', 0],
+  ['Soil Association', 'arable', 'Weed management plan required; emphasis on preventive methods (rotation, cover crops, competitive crop varieties) before curative interventions', 'weed_management', 'SA Standard 4.8', 1],
+
+  // ── New: Record Keeping (detailed) ────────────────────────────────────
+  ['EU Baseline', 'arable', 'Full input/output mass balance records per plot; field-level records of all inputs, operations, and yields', 'records', 'Reg 2018/848 Art 39(1)(d)', 0],
+  ['EU Baseline', 'beef_sheep', 'Livestock movement records, feed records per batch, and veterinary treatment records with double withdrawal periods', 'records', 'Reg 2018/848 Art 14(1)(e)(ii)', 0],
+  ['Soil Association', 'dairy', 'All veterinary treatments recorded with double statutory withdrawal period applied; prophylactic use banned', 'records', 'SA Standard 11.9', 1],
+
+  // ── New: Parallel Production ──────────────────────────────────────────
+  ['EU Baseline', 'arable', 'Parallel production (organic and non-organic of same crop) generally banned; exception only with physical and temporal separation plus additional inspection visits', 'parallel_production', 'Reg 2018/848 Art 9(7)', 0],
+
+  // ── New: Aquaculture ──────────────────────────────────────────────────
+  ['Soil Association', 'aquaculture', 'Stocking density limits: salmon max 10 kg/m3, trout max 25 kg/m3; natural feed sources preferred', 'density', 'SA Standard 15.2', 1],
+  ['Soil Association', 'aquaculture', 'No synthetic colorants (e.g. canthaxanthin) in feed; natural astaxanthin from algae permitted', 'feed', 'SA Standard 15.5', 1],
+  ['EU Baseline', 'aquaculture', 'Organic aquaculture certification available from Soil Association and OF&G in the UK', 'certification', 'Reg 2018/848 Annex II Part III', 0],
+
+  // ── New: Processed Food Standards (detailed) ──────────────────────────
+  ['EU Baseline', 'processing', '95% organic ingredients by weight (excluding water and salt) required for "organic" label', 'labelling', 'Reg 2018/848 Art 30(2)', 0],
+  ['EU Baseline', 'processing', '70-95% organic ingredients may use "made with organic [ingredient]" labelling', 'labelling', 'Reg 2018/848 Art 30(5)', 0],
+  ['EU Baseline', 'processing', 'Most synthetic E-number additives prohibited; restricted permitted list in Annex V; no irradiation; no nano-materials', 'additives', 'Reg 2018/848 Annex V Part D', 0],
+
+  // ── New: Wine/Cider ───────────────────────────────────────────────────
+  ['EU Baseline', 'wine', 'Organic grapes or apples required; sulphite limits lower than conventional: 100 mg/l red, 150 mg/l white', 'production', 'Reg 2018/848 Annex II Part VI', 0],
+  ['EU Baseline', 'wine', 'No synthetic fining agents; permitted fining: bentonite, casein, egg albumin, isinglass', 'production', 'Reg 2018/848 Annex II Part VI', 0],
+
+  // ── New: Textiles ─────────────────────────────────────────────────────
+  ['Soil Association', 'textiles', 'GOTS (Global Organic Textile Standard) required for farm-to-final-product chain; covers fibre, processing, packaging, and labelling', 'certification', 'GOTS Version 7.0', 1],
+  ['Soil Association', 'textiles', 'Organic wool processing must use GOTS-certified facilities; cotton must be organic-certified from field to finished product', 'processing', 'GOTS Version 7.0', 1],
+
+  // ── New: Mushroom Production ──────────────────────────────────────────
+  ['Soil Association', 'mushroom', 'Substrate must be from organic or permitted materials (straw, wood chip, composted manure); no synthetic pesticides on substrate', 'production', 'SA Standard 6.8', 1],
+  ['Soil Association', 'mushroom', 'Specific SA standards for mushroom production; substrate composition and pest management documented', 'certification', 'SA Standard 6.8', 1],
+
+  // ── New: Beekeeping ───────────────────────────────────────────────────
+  ['Soil Association', 'beekeeping', 'Organic forage area required within 3 km radius of apiary; area must be organic crops or uncultivated land', 'forage', 'SA Standard 14.2', 1],
+  ['Soil Association', 'beekeeping', 'No synthetic treatments for varroa; permitted: oxalic acid, formic acid, thymol. Wax management: replace 20% annually', 'health', 'SA Standard 14.5', 1],
+
+  // ── New: Transition Support ───────────────────────────────────────────
+  ['EU Baseline', 'arable', 'DEFRA Organic Conversion Information Service (OCIS) provides free conversion advice; Organic Research Centre and local organic groups offer support', 'transition_support', 'DEFRA guidance', 0],
+
+  // ── New: Regenerative Agriculture Principles ──────────────────────────
+  ['Regen Agriculture', 'arable', 'Minimise soil disturbance: no-till or min-till to reduce oxidation of organic matter and preserve soil structure and biology', 'soil_disturbance', 'Regen practice', 0],
+  ['Regen Agriculture', 'arable', 'Keep soil covered at all times: cover crops, mulch, or living roots year-round to prevent erosion and nutrient loss', 'soil_cover', 'Regen practice', 0],
+  ['Regen Agriculture', 'arable', 'Maximise crop diversity: complex rotations, intercropping, companion planting to break disease cycles and build soil biology', 'diversity', 'Regen practice', 0],
+  ['Regen Agriculture', 'arable', 'Integrate livestock: mob grazing, ley-arable integration for nutrient cycling and grassland health improvement', 'livestock_integration', 'Regen practice', 0],
+  ['Regen Agriculture', 'arable', 'Keep living roots in soil year-round: maintain mycorrhizal networks and feed soil biology continuously', 'living_roots', 'Regen practice', 0],
 ];
 
 for (const [body, type, req, cat, ref, additional] of standards) {
@@ -92,6 +145,26 @@ const inputs: [string, string, string, string, string, number][] = [
   ['feed_additive', 'Vitamins A, D, E (synthetic)', 'Annex III', 'Permitted for livestock when dietary needs cannot be met from organic feed', 'As required by species', 0],
   ['feed_additive', 'Trace element minerals', 'Annex III', 'Copper, zinc, selenium, cobalt, iodine, manganese as supplements', 'As required by species', 0],
   ['feed_additive', 'Specified enzymes', 'Annex III', 'Selected enzyme preparations for feed digestibility', 'As per product specification', 0],
+
+  // ── New fertilisers ───────────────────────────────────────────────────
+  ['fertiliser', 'Gypsum (calcium sulphate)', 'Annex I', 'Permitted; improves soil structure on heavy clays; natural source only', 'No specific limit', 0],
+  ['fertiliser', 'Vinasse (sugar beet by-product)', 'Annex I', 'Permitted; potash and nitrogen source; apply in spring to growing crops', 'No specific limit', 0],
+  ['fertiliser', 'Horn and hoof meal', 'Annex I', 'Permitted; slow-release nitrogen at 12-14% N; from non-GMO animal sources', 'No specific limit', 0],
+  ['fertiliser', 'Feather meal', 'Annex I', 'Permitted; slow-release nitrogen at 12-13% N; heat-treated poultry feathers', 'No specific limit', 0],
+  ['fertiliser', 'Green waste compost (PAS 100)', 'Annex I', 'Permitted if from approved PAS 100 source; heavy metal testing required per batch', 'No specific limit', 0],
+
+  // ── New plant protection ──────────────────────────────────────────────
+  ['plant_protection', 'Quassia extract', 'Annex II', 'Permitted; aphid control on soft fruit and brassicas; low toxicity to beneficials', 'No specific limit', 0],
+  ['plant_protection', 'Garlic extract', 'Annex II', 'Permitted; repellent effect on aphids and other pests; foliar spray application', 'No specific limit', 0],
+  ['plant_protection', 'Soft soap (potassium salts of fatty acids)', 'Annex II', 'Permitted; contact insecticide for aphids and whitefly; breaks down rapidly', 'No specific limit', 0],
+  ['plant_protection', 'Paraffin oil', 'Annex II', 'Permitted; winter wash for fruit trees to control scale insects and overwintering aphid eggs', 'No specific limit', 0],
+  ['plant_protection', 'Iron sulphate', 'Annex II', 'Permitted as moss control on grassland; also minor trace element supply', 'No specific limit', 0],
+  ['plant_protection', 'Pheromone traps', 'Annex II', 'Permitted; monitoring and mass trapping for codling moth and other Lepidoptera; no chemical residue', 'No specific limit', 0],
+
+  // ── New feed inputs ───────────────────────────────────────────────────
+  ['feed_additive', 'Minerals (salt, limestone, dicalcium phosphate, magnesium oxide)', 'Annex III', 'Specific permitted mineral list for livestock feed supplementation', 'As required by species', 0],
+  ['feed_additive', 'Propionic acid (grain preservation)', 'Annex III', 'Permitted for grain preservation in organic systems; prevents mould growth in stored grain', 'As per product specification', 0],
+  ['feed_additive', 'Formic acid (silage preservation)', 'Annex III', 'Permitted for silage preservation in organic systems; improves fermentation and reduces spoilage', 'As per product specification', 0],
 ];
 
 for (const [type, substance, annex, conditions, rate, derogation] of inputs) {
@@ -164,6 +237,28 @@ const coverCrops: [string, string, string, string, number, number, string, strin
     'Autumn-sown crops', 'break_crop, biomass'],
   ['3-way mix (vetch + phacelia + oats)', 'mix', 'Aug-Sep', 'Incorporate in spring', 50, 5.0,
     'Spring cereals, spring crops', 'nitrogen_fixation, biomass, diversity'],
+
+  // ── New cover crops ───────────────────────────────────────────────────
+  ['Berseem clover (Egyptian clover)', 'legume', 'Apr-Aug', 'Frost-killed or mow and incorporate', 80, 4.0,
+    'Spring cereals, spring beans', 'nitrogen_fixation, multi_cut'],
+  ['Chicory', 'herb', 'Apr-Aug', 'Perennial (2-3 years); graze or top', 0, 3.0,
+    'Herbal ley component, livestock grazing', 'mineral_accumulator, anthelmintic, deep_rooting'],
+  ['Plantain', 'herb', 'Mar-Sep', 'Perennial; graze or top', 0, 2.5,
+    'Herbal ley component, drought-prone fields', 'drought_tolerance, mineral_rich_forage'],
+  ['Sunflower', 'other', 'May-Jun', 'Frost-killed', 0, 4.0,
+    'Any crop', 'pollinator, deep_rooting, biomass'],
+  ['Tillage radish', 'brassica', 'Jul-Sep', 'Frost-killed; decomposes rapidly', 0, 3.5,
+    'Spring crops; avoid before OSR', 'compaction_relief, deep_rooting'],
+  ['4-way mix (vetch + crimson clover + phacelia + oats)', 'mix', 'Aug-Sep', 'Incorporate in spring', 70, 5.5,
+    'Spring cereals, spring crops', 'nitrogen_fixation, biomass, diversity, pollinator'],
+  ['Understory clover (micro-clover/white clover)', 'legume', 'Mar-May (under cereal)', 'Persists post-harvest; graze or mow', 60, 1.5,
+    'Establishes under cereal, provides ground cover post-harvest', 'nitrogen_fixation, ground_cover, weed_suppression'],
+  ['Stubble turnips', 'brassica', 'Jul-Sep', 'Frost-hardy; graze in autumn/winter', 0, 4.0,
+    'Spring crops; livestock grazing option', 'grazing, biomass, fast_establishment'],
+  ['Sainfoin', 'legume', 'Mar-May', 'Perennial (10+ year life); cut or graze', 120, 3.5,
+    'Chalky soils, long-term ley', 'nitrogen_fixation, pollinator, anthelmintic, deep_rooting'],
+  ['Winter oilseed rape (volunteer/cover)', 'brassica', 'Aug-Sep', 'Incorporate in spring or harvest', 0, 4.5,
+    'Spring crops; monitor clubroot risk', 'biomass, autumn_ground_cover'],
 ];
 
 for (const [species, type, window, destruction, nFix, biomass, before, purpose] of coverCrops) {
@@ -192,6 +287,20 @@ const biodiversity: [string, string, number, number, number, string][] = [
     'SFI agroforestry payment; silvoarable or silvopastoral'],
   ['Buffer strip (6m)', 'field_margin', 2.0, 200, 30,
     'SFI SW3 payment 451 GBP/ha; low establishment cost'],
+
+  // ── New biodiversity features ─────────────────────────────────────────
+  ['Skylark plots', 'in_field', 0.0, 50, 30,
+    'CS option AB5; 4m x 4m unsown patches in winter cereal (2 per ha); no BNG units but proven conservation benefit for ground-nesting birds'],
+  ['Lapwing scrapes', 'in_field', 0.5, 300, 30,
+    'CS option AB9; shallow wet depressions in spring crop fields; requires wet conditions in breeding season (Mar-Jun)'],
+  ['Barn owl boxes', 'boundary', 0.0, 150, 30,
+    'Install on mature trees or buildings, 3m+ height with predator guard; pairs with rough grass margins for hunting habitat'],
+  ['Ancient woodland restoration (PAWS)', 'woodland', 5.0, 8000, 30,
+    'Plantation on Ancient Woodland Sites: removal of non-native conifers; high BNG value; Forestry Commission grants available'],
+  ['Pond restoration', 'in_field', 1.5, 3000, 30,
+    'De-silt, remove shade, restore margins; more cost-effective than new creation; approx 1.5 BNG units per restored pond'],
+  ['Green bridges / wildlife corridors', 'boundary', 2.5, 3500, 30,
+    'Connecting habitats across farm: hedgerow-pond-woodland linkage; landscape-scale BNG contribution; SFI boundary options'],
 ];
 
 for (const [habitat, feature, bng, cost, years, grant] of biodiversity) {
@@ -236,6 +345,32 @@ const soilHealth: [string, string, string, string, string, string][] = [
     'Wet sieving test; proportion of aggregates surviving immersion',
     'Mycorrhizal inoculation, reduced tillage, organic matter, diverse rotations',
     '2-5 years', 'all'],
+
+  // ── New soil health indicators ────────────────────────────────────────
+  ['Mycorrhizal colonisation', '>30% root colonisation',
+    'Root staining and microscopy; sample roots from actively growing crop',
+    'Avoid high P inputs (>Olsen P 25), reduce tillage intensity, use mycorrhizal-friendly crops in rotation (avoid brassicas)',
+    '2-4 years for recovery after tillage damage', 'all'],
+  ['Soil biology (tea bag index)', 'Decomposition rate varies by soil type',
+    'Standardised tea bag decomposition test; bury rooibos and green tea bags for 3 months, measure weight loss',
+    'Diverse organic inputs, reduced disturbance, maintain soil moisture, diverse cover crop mixes',
+    '1-2 years for detectable change', 'all'],
+  ['Penetrometer resistance', '<2 MPa at field capacity',
+    'Penetrometer measurement at multiple points across field; measure at field capacity moisture for comparable results',
+    'Subsoiling at correct depth, bio-drilling cover crops (radish, chicory), controlled traffic farming, avoid trafficking wet soils',
+    '1-3 years depending on compaction depth', 'all'],
+  ['Available phosphorus (Olsen P)', '16-25 mg/l (Index 2)',
+    'Standard Olsen P soil test; sample 0-15 cm depth; 20 cores per field minimum',
+    'Manage with organic P inputs (FYM, bone meal, rock phosphate); maintain pH 6.0-6.5 for P availability; avoid over-application above Index 3',
+    '1-3 years for P index change', 'all'],
+  ['Available potassium', '121-240 mg/l (Index 2-)',
+    'Standard soil test; sample 0-15 cm depth; ammonium nitrate extraction',
+    'Manage with FYM/compost, K-rich green manures (comfrey, chicory), wood ash; avoid K depletion on light soils',
+    '1-2 years for K index change', 'all'],
+  ['Soil carbon stock', 'Maintain or increase from baseline; national average 55 t C/ha arable to 30 cm',
+    'Measure as tonnes C/ha to 30 cm depth; requires bulk density measurement; lab analysis of total organic carbon',
+    'Cover crops, reduced tillage, organic matter additions, permanent pasture conversion; ELM carbon payments emerging',
+    '5-20 years for significant stock change', 'all'],
 ];
 
 for (const [indicator, target, method, practices, timeline, soilType] of soilHealth) {
