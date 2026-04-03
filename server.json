@@ -1,22 +1,16 @@
 {
-  "name": "uk-organic-regen-mcp",
-  "display_name": "UK Organic & Regenerative MCP",
-  "description": "UK organic farming standards and regenerative agriculture practices via MCP -- certification, conversion, permitted inputs, cover crops, soil health, BNG",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Ansvar-Systems/uk-organic-regen",
+  "description": "UK organic and regenerative farming \u2014 certification, cover crops, soil health, BNG",
+  "repository": {
+    "url": "https://github.com/Ansvar-Systems/uk-organic-regen-mcp",
+    "source": "github"
+  },
   "version": "0.1.0",
-  "jurisdiction": ["GB"],
-  "tools_count": 10,
-  "transport": {
-    "stdio": {
-      "command": "npx",
-      "args": ["-y", "@ansvar/uk-organic-regen-mcp"]
-    },
-    "streamable_http": {
+  "remotes": [
+    {
+      "type": "streamable-http",
       "url": "https://mcp.ansvar.eu/uk-organic-regen/mcp"
     }
-  },
-  "repository": "https://github.com/Ansvar-Systems/uk-organic-regen-mcp",
-  "homepage": "https://ansvar.eu/open-agriculture",
-  "license": "Apache-2.0",
-  "author": "Ansvar Systems",
-  "keywords": ["mcp", "organic", "regenerative", "soil-health", "cover-crops", "biodiversity", "farming"]
+  ]
 }
