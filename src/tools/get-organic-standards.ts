@@ -1,4 +1,5 @@
 import { buildMeta } from '../metadata.js';
+import { buildCitation } from '../citation.js';
 import { validateJurisdiction } from '../jurisdiction.js';
 import type { Database } from '../db.js';
 
@@ -61,5 +62,12 @@ export function handleGetOrganicStandards(db: Database, args: OrganicStandardsAr
     })),
     eu_additional_count: rows.filter(r => r.additional_to_eu === 1).length,
     _meta: buildMeta({ source_url: 'https://www.soilassociation.org/our-standards/' }),
+    _citation: buildCitation(
+      `UK Organic Standards: ${args.product_type}`,
+      `Organic standards for ${args.product_type} (${jv.jurisdiction})`,
+      'get_organic_standards',
+      { product_type: args.product_type },
+      'https://www.soilassociation.org/our-standards/',
+    ),
   };
 }
